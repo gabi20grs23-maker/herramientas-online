@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de IMC | Herramientas Online</title>
+<meta name="description" content="Calcula tu Índice de Masa Corporal (IMC) de forma gratuita.">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<a href="index.html">
+<img src="logo.png" alt="Herramientas Online">
+</a>
+
+<span>Herramientas Online</span>
+
+</div>
+
+<ul class="menu">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+
+</nav>
+
+<header class="hero">
+<h1>Calculadora de IMC</h1>
+<p>Calcula tu Índice de Masa Corporal en segundos.</p>
+</header>
+
+<section style="max-width:700px;margin:auto;padding:30px;">
+
+<label>Peso (kg)</label>
+
+<input id="peso" type="number" placeholder="Ejemplo: 75">
+
+<br><br>
+
+<label>Altura (m)</label>
+
+<input id="altura" type="number" step="0.01" placeholder="Ejemplo: 1.75">
+
+<br><br>
+
+<button onclick="calcularIMC()">Calcular IMC</button>
+
+<h2 id="resultado"></h2>
+
+<hr style="margin:40px 0;">
+
+<h2>¿Qué es el IMC?</h2>
+
+<p>El Índice de Masa Corporal (IMC) es una medida que relaciona el peso y la altura para estimar si una persona tiene un peso adecuado.</p>
+
+</section>
+
+<script>
+
+function calcularIMC(){
+
+const peso=Number(document.getElementById("peso").value);
+
+const altura=Number(document.getElementById("altura").value);
+
+if(!peso || !altura){
+
+document.getElementById("resultado").innerHTML="Introduce un peso y una altura válidos.";
+
+return;
+
+}
+
+const imc=peso/(altura*altura);
+
+let estado="";
+
+if(imc<18.5){
+
+estado="Bajo peso";
+
+}else if(imc<25){
+
+estado="Peso normal";
+
+}else if(imc<30){
+
+estado="Sobrepeso";
+
+}else{
+
+estado="Obesidad";
+
+}
+
+document.getElementById("resultado").innerHTML=
+`Tu IMC es <strong>${imc.toFixed(1)}</strong> (${estado})`;
+
+}
+
+</script>
+
+</body>
+</html>
