@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://gabi20grs23-maker.github.io/herramientas-online/sitemap.xml
