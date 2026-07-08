@@ -336,3 +336,27 @@ transform:translateY(-8px);
 color:#16a34a;
 margin-bottom:15px;
 }
+.presentacion{
+
+max-width:900px;
+margin:60px auto;
+padding:20px;
+text-align:center;
+line-height:1.8;
+
+}
+
+.presentacion h2{
+
+font-size:34px;
+margin-bottom:20px;
+color:#16a34a;
+
+}
+
+.presentacion p{
+
+font-size:18px;
+color:#555;
+
+}
