@@ -257,5 +257,34 @@ rápidas, sencillas y accesibles desde cualquier dispositivo.
 
 <script src="script.js"></script>
 
+<script>
+
+const buscador = document.getElementById("buscar");
+
+buscador.addEventListener("keyup", function(){
+
+const texto = buscador.value.toLowerCase();
+
+const tarjetas = document.querySelectorAll(".card");
+
+tarjetas.forEach(card=>{
+
+const contenido = card.innerText.toLowerCase();
+
+if(contenido.includes(texto)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+});
+
+</script>
 </body>
 </html>
