@@ -121,3 +121,42 @@ footer{
     height:45px;
     border-radius:10px;
 }
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#1d4ed8;
+flex-wrap:wrap;
+}
+
+.menu{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#9be15d;
+}
+
+@media(max-width:768px){
+
+.navbar{
+flex-direction:column;
+gap:15px;
+}
+
+.menu{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
