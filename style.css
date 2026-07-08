@@ -160,3 +160,32 @@ justify-content:center;
 }
 
 }
+.footer-links{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:20px;
+
+margin-top:20px;
+
+}
+
+.footer-links a{
+
+text-decoration:none;
+
+color:#2563eb;
+
+font-weight:bold;
+
+}
+
+.footer-links a:hover{
+
+text-decoration:underline;
+
+}
