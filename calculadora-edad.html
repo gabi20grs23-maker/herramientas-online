@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Edad | Herramientas Online</title>
+
+<meta name="description" content="Calcula tu edad exacta en años, meses y días de forma gratuita.">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="logo.png">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+<a href="index.html">
+<img src="logo.png" alt="Herramientas Online">
+</a>
+<span>Herramientas Online</span>
+</div>
+
+<ul class="menu">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+
+</nav>
+
+<header class="hero">
+<h1>Calculadora de Edad</h1>
+<p>Calcula tu edad exacta en segundos.</p>
+</header>
+
+<section style="max-width:700px;margin:auto;padding:30px;">
+
+<label>Fecha de nacimiento</label>
+
+<input id="fecha" type="date">
+
+<br><br>
+
+<button onclick="calcularEdad()">
+Calcular edad
+</button>
+
+<h2 id="resultado"></h2>
+
+<hr style="margin:40px 0;">
+
+<h2>¿Cómo funciona esta calculadora?</h2>
+
+<p>
+Introduce tu fecha de nacimiento y la herramienta calculará automáticamente tu edad utilizando la fecha actual.
+</p>
+
+<h3>¿Para qué sirve?</h3>
+
+<ul>
+<li>Conocer tu edad exacta.</li>
+<li>Rellenar formularios.</li>
+<li>Comprobar la edad de otra persona.</li>
+</ul>
+
+</section>
+
+<script>
+
+function calcularEdad(){
+
+const fecha=document.getElementById("fecha").value;
+
+if(!fecha){
+
+document.getElementById("resultado").innerHTML="Selecciona una fecha.";
+
+return;
+
+}
+
+const nacimiento=new Date(fecha);
+
+const hoy=new Date();
+
+let edad=hoy.getFullYear()-nacimiento.getFullYear();
+
+const mes=hoy.getMonth()-nacimiento.getMonth();
+
+if(mes<0 || (mes===0 && hoy.getDate()<nacimiento.getDate())){
+
+edad--;
+
+}
+
+document.getElementById("resultado").innerHTML=
+
+`Tienes <strong>${edad}</strong> años.`;
+
+}
+
+</script>
+
+</body>
+</html>
