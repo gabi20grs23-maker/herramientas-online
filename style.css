@@ -108,3 +108,16 @@ footer{
         padding:20px;
     }
 }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+    border-radius:10px;
+}
