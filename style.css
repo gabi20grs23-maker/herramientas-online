@@ -189,3 +189,44 @@ font-weight:bold;
 text-decoration:underline;
 
 }
+.categorias{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+margin:25px 0;
+
+}
+
+.categoria{
+
+background:#16a34a;
+
+color:white;
+
+border:none;
+
+padding:12px 18px;
+
+border-radius:30px;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.categoria:hover{
+
+transform:scale(1.05);
+
+background:#15803d;
+
+}
