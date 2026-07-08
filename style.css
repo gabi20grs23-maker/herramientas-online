@@ -380,3 +380,19 @@ font-size:18px;
 color:#555;
 
 }
+footer{
+margin-top:60px;
+padding:40px 20px;
+text-align:center;
+background:#111827;
+color:white;
+}
+
+footer a{
+color:#22c55e;
+text-decoration:none;
+}
+
+footer a:hover{
+text-decoration:underline;
+}
