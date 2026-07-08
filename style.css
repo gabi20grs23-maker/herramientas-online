@@ -303,3 +303,36 @@ font-size:17px;
 border-radius:12px;
 
 }
+.ultimas{
+padding:60px 20px;
+}
+
+.ultimas h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.ultimas-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.ultima-card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+text-decoration:none;
+color:#222;
+transition:.3s;
+}
+
+.ultima-card:hover{
+transform:translateY(-8px);
+}
+
+.ultima-card h3{
+color:#16a34a;
+margin-bottom:15px;
+}
