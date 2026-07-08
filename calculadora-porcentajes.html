@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Porcentajes | Herramientas Online</title>
+
+<meta name="description" content="Calcula porcentajes de forma rápida y gratuita.">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<div class="logo">
+Herramientas Online
+</div>
+</nav>
+
+<header class="hero">
+
+<h1>Calculadora de Porcentajes</h1>
+
+<p>Calcula cualquier porcentaje en segundos.</p>
+
+</header>
+
+<section style="max-width:700px;margin:auto;padding:30px;">
+
+<label>Introduce una cantidad</label>
+
+<input
+id="numero"
+type="number"
+placeholder="Ejemplo: 250">
+
+<br><br>
+
+<label>Porcentaje (%)</label>
+
+<input
+id="porcentaje"
+type="number"
+placeholder="Ejemplo: 15">
+
+<br><br>
+
+<button onclick="calcular()">
+Calcular
+</button>
+
+<h2 id="resultado"></h2>
+
+</section>
+
+<script>
+
+function calcular(){
+
+let numero=
+Number(document.getElementById("numero").value);
+
+let porcentaje=
+Number(document.getElementById("porcentaje").value);
+
+let resultado=
+numero*porcentaje/100;
+
+document.getElementById("resultado").innerHTML=
+porcentaje+"% de "+numero+" = <strong>"+resultado.toFixed(2)+"</strong>";
+
+}
+
+</script>
+
+</body>
+</html>
