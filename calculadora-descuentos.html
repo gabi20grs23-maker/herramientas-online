@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Descuentos | Herramientas Online</title>
+
+<meta name="description" content="Calcula descuentos de forma rápida y gratuita.">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<a href="index.html">
+<img src="logo.png" alt="Herramientas Online">
+</a>
+
+<span>Herramientas Online</span>
+
+</div>
+
+<ul class="menu">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+
+</nav>
+
+<header class="hero">
+
+<h1>Calculadora de Descuentos</h1>
+
+<p>Calcula el precio final de cualquier producto después de aplicar un descuento.</p>
+
+</header>
+
+<section style="max-width:700px;margin:auto;padding:30px;">
+
+<label>Precio original (€)</label>
+
+<input id="precio" type="number" placeholder="Ejemplo: 120">
+
+<br><br>
+
+<label>Descuento (%)</label>
+
+<input id="descuento" type="number" placeholder="Ejemplo: 25">
+
+<br><br>
+
+<button onclick="calcularDescuento()">
+Calcular
+</button>
+
+<h2 id="resultado"></h2>
+
+<hr style="margin:40px 0;">
+
+<h2>¿Cómo funciona?</h2>
+
+<p>
+Introduce el precio original y el porcentaje de descuento. La herramienta calculará automáticamente el importe descontado y el precio final.
+</p>
+
+<h3>Ejemplo</h3>
+
+<p>
+Un producto de 120 € con un 25 % de descuento costará 90 €.
+</p>
+
+</section>
+
+<script>
+
+function calcularDescuento(){
+
+const precio=Number(document.getElementById("precio").value);
+
+const descuento=Number(document.getElementById("descuento").value);
+
+if(!precio || descuento<0){
+
+document.getElementById("resultado").innerHTML="Introduce valores válidos.";
+
+return;
+
+}
+
+const ahorro=precio*descuento/100;
+
+const final=precio-ahorro;
+
+document.getElementById("resultado").innerHTML=
+
+`Ahorras <strong>${ahorro.toFixed(2)} €</strong><br>
+Precio final: <strong>${final.toFixed(2)} €</strong>`;
+
+}
+
+</script>
+
+</body>
+</html>
