@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de IVA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<div class="logo">🛠 Herramientas Online</div>
+</nav>
+
+<header class="hero">
+<h1>Calculadora de IVA</h1>
+<p>Calcula el precio con IVA o sin IVA en segundos.</p>
+</header>
+
+<section style="max-width:600px;margin:auto;padding:20px;">
+
+<input id="precio" type="number" placeholder="Introduce el importe">
+
+<br><br>
+
+<select id="iva">
+<option value="21">21%</option>
+<option value="10">10%</option>
+<option value="4">4%</option>
+</select>
+
+<br><br>
+
+<button onclick="calcularIVA()">Calcular</button>
+
+<h2 id="resultado"></h2>
+
+</section>
+
+<script>
+function calcularIVA(){
+
+let precio=Number(document.getElementById("precio").value);
+
+let iva=Number(document.getElementById("iva").value);
+
+let total=precio+(precio*iva/100);
+
+document.getElementById("resultado").innerHTML=
+"Total con IVA: "+total.toFixed(2)+" €";
+
+}
+</script>
+
+</body>
+</html>
