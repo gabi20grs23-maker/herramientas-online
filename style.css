@@ -68,7 +68,8 @@ min-height:220px;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+transform:translateY(-8px);
+box-shadow:0 15px 30px rgba(0,0,0,.15);
 }
 
 .card h2{
@@ -110,7 +111,22 @@ button{
     border-radius:8px;
     cursor:pointer;
 }
+.card button{
+width:100%;
+padding:14px;
+margin-top:20px;
+background:#16a34a;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
 
+.card button:hover{
+background:#15803d;
+}
 button:hover{
     background:#1d4ed8;
 }
