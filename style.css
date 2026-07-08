@@ -56,11 +56,15 @@ nav{
 }
 
 .card{
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.25s;
+background:#fff;
+border-radius:18px;
+padding:25px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+min-height:220px;
 }
 
 .card:hover{
