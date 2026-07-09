@@ -1,22 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculadora de IVA</title>
+
+<title>Calculadora de IVA | Herramientas Online</title>
+
+<meta name="description" content="Calcula el IVA de cualquier importe de forma gratuita y rápida.">
+
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 
 <body>
 
-<nav>
+<nav class="navbar">
+
 <div class="logo">
-    <a href="index.html" style="color:white;text-decoration:none;">
-        🛠 Herramientas Online
-    </a>
+<a href="index.html">
+<img src="logo.png" alt="Herramientas Online">
+</a>
+<span>Herramientas Online</span>
 </div>
+
+<ul class="menu">
+<li><a href="index.html">🏠 Inicio</a></li>
+<li><a href="todas-las-herramientas.html">🛠️ Herramientas</a></li>
+<li><a href="sobre-nosotros.html">ℹ️ Sobre nosotros</a></li>
+<li><a href="contacto.html">📩 Contacto</a></li>
+</ul>
+
 </nav>
 
 <header class="hero">
@@ -41,6 +55,7 @@
 <button onclick="calcularIVA()">Calcular</button>
 
 <h2 id="resultado"></h2>
+
 <hr style="margin:40px 0;">
 
 <h2>¿Cómo calcular el IVA?</h2>
@@ -64,41 +79,60 @@ Si un producto cuesta 100 € y el IVA es del 21 %, el precio final será de 121
 <li>4 % - Tipo superreducido.</li>
 </ul>
 
-<h3>Preguntas frecuentes</h3>
-
-<p><strong>¿La calculadora es gratuita?</strong><br>
-Sí, puedes utilizarla todas las veces que quieras.</p>
-
-<p><strong>¿Funciona en móviles?</strong><br>
-Sí, está diseñada para funcionar tanto en móviles como en ordenadores.</p>
-</section>
-
-<script>
-function calcularIVA(){
-
-let precio=Number(document.getElementById("precio").value);
-
-let iva=Number(document.getElementById("iva").value);
-
-let total=precio+(precio*iva/100);
-
-document.getElementById("resultado").innerHTML=
-"Total con IVA: "+total.toFixed(2)+" €";
-
-}
-</script>
-
-</body>
-</html>
 <hr>
 
 <h2>Preguntas frecuentes</h2>
 
 <h3>¿Qué es el IVA?</h3>
-<p>El IVA (Impuesto sobre el Valor Añadido) es un impuesto que se aplica al consumo de bienes y servicios.</p>
+
+<p>
+El IVA (Impuesto sobre el Valor Añadido) es un impuesto que se aplica al consumo de bienes y servicios.
+</p>
 
 <h3>¿Cómo se calcula el IVA?</h3>
-<p>Multiplica el precio sin IVA por el porcentaje correspondiente (por ejemplo, el 21 %) y súmalo al importe original.</p>
+
+<p>
+Multiplica el precio sin IVA por el porcentaje correspondiente y súmalo al importe original.
+</p>
 
 <h3>¿Qué tipos de IVA existen en España?</h3>
-<p>Los más habituales son el 21 %, el 10 % y el 4 %, dependiendo del producto o servicio.</p>
+
+<p>
+Los tipos más habituales son el 21 %, el 10 % y el 4 %, dependiendo del producto o servicio.
+</p>
+
+<p style="text-align:center;margin-top:40px;">
+<a href="index.html">
+<button>🏠 Volver al inicio</button>
+</a>
+</p>
+
+</section>
+
+<script>
+
+function calcularIVA(){
+
+let precio = Number(document.getElementById("precio").value);
+
+let iva = Number(document.getElementById("iva").value);
+
+if(!precio){
+
+document.getElementById("resultado").innerHTML="Introduce un importe válido.";
+
+return;
+
+}
+
+let total = precio + (precio * iva / 100);
+
+document.getElementById("resultado").innerHTML =
+"Total con IVA: <strong>" + total.toFixed(2) + " €</strong>";
+
+}
+
+</script>
+
+</body>
+</html>
