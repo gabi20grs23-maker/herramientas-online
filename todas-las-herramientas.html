@@ -1,56 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Todas las herramientas | Herramientas Online</title>
-<meta name="description" content="Listado completo de todas las herramientas disponibles.">
+
+<title>Todas las Herramientas Online | Calculadoras y Conversores Gratis</title>
+
+<meta name="description" content="Descubre todas las herramientas online gratuitas disponibles. Calculadoras de IVA, IMC, edad, descuentos, porcentajes, regla de tres, conversores y mucho más.">
+
+<meta name="keywords" content="herramientas online, calculadoras gratis, conversores online, calculadora IVA, calculadora IMC, calculadora edad, descuentos, porcentajes">
+
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="logo.png">
+<link rel="icon" href="favicon.png">
+
 </head>
 
 <body>
 
 <nav class="navbar">
+
 <div class="logo">
 <a href="index.html">
 <img src="logo.png" alt="Herramientas Online">
 </a>
 <span>Herramientas Online</span>
 </div>
+
+<ul class="menu">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="todas-las-herramientas.html">Herramientas</a></li>
+<li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+
 </nav>
+
+<header class="hero">
+
+<h1>Todas las herramientas online</h1>
+
+<p>
+Accede desde una única página a todas nuestras calculadoras, conversores y utilidades gratuitas.
+</p>
+
+</header>
 
 <section style="max-width:900px;margin:auto;padding:30px;">
 
-<h1>Todas las herramientas</h1>
+<h2>Calculadoras disponibles</h2>
 
-<p>Accede rápidamente a todas nuestras herramientas gratuitas.</p>
+<p>
+A continuación encontrarás todas las herramientas disponibles actualmente. Todas funcionan directamente desde el navegador, sin necesidad de instalar programas ni registrarte.
+</p>
 
 <ul>
 
-<li><a href="calculadora-iva.html">Calculadora de IVA</a></li>
+<li><a href="calculadora-iva.html">🧮 Calculadora de IVA</a></li>
 
-<li><a href="calculadora-imc.html">Calculadora de IMC</a></li>
+<li><a href="calculadora-imc.html">⚖️ Calculadora de IMC</a></li>
 
-<li><a href="calculadora-edad.html">Calculadora de Edad</a></li>
+<li><a href="calculadora-edad.html">🎂 Calculadora de Edad</a></li>
 
-<li><a href="calculadora-descuentos.html">Calculadora de Descuentos</a></li>
+<li><a href="calculadora-descuentos.html">💸 Calculadora de Descuentos</a></li>
 
-<li><a href="calculadora-porcentajes.html">Calculadora de Porcentajes</a></li>
+<li><a href="calculadora-porcentajes.html">📊 Calculadora de Porcentajes</a></li>
 
-<li><a href="calculadora-regla-de-tres.html">Calculadora de Regla de Tres</a></li>
+<li><a href="calculadora-regla-de-tres.html">📐 Calculadora de Regla de Tres</a></li>
 
-<li><a href="conversor-temperatura.html">Conversor de Temperatura</a></li>
+<li><a href="conversor-temperatura.html">🌡️ Conversor de Temperatura</a></li>
 
 </ul>
 
-<p style="margin-top:40px;">
+<hr style="margin:50px 0;">
+
+<h2>¿Qué encontrarás en Herramientas Online?</h2>
+
+<p>
+Nuestro objetivo es ofrecer herramientas rápidas, gratuitas y fáciles de utilizar para resolver cálculos cotidianos desde cualquier dispositivo.
+</p>
+
+<p>
+La web se actualiza periódicamente con nuevas calculadoras y conversores para ampliar las utilidades disponibles.
+</p>
+
+<hr style="margin:50px 0;">
+
+<h2>Preguntas frecuentes</h2>
+
+<h3>¿Las herramientas son gratuitas?</h3>
+
+<p>
+Sí. Todas las herramientas disponibles pueden utilizarse de forma totalmente gratuita.
+</p>
+
+<h3>¿Necesito registrarme?</h3>
+
+<p>
+No. No es necesario crear una cuenta ni proporcionar datos personales para utilizar las calculadoras.
+</p>
+
+<h3>¿Funcionan en móviles?</h3>
+
+<p>
+Sí. Todas las herramientas son compatibles con teléfonos móviles, tablets y ordenadores.
+</p>
+
+<h3>¿Se añadirán nuevas herramientas?</h3>
+
+<p>
+Sí. Continuamente incorporamos nuevas calculadoras y conversores para ofrecer más utilidades a nuestros usuarios.
+</p>
+
+<p style="text-align:center;margin-top:50px;">
+
 <a href="index.html">
 <button>🏠 Volver al inicio</button>
 </a>
+
 </p>
 
 </section>
+
+<footer>
+
+<h3>Herramientas Online</h3>
+
+<p>
+Calculadoras, conversores y herramientas online gratuitas para cualquier momento.
+</p>
+
+<p>
+
+<a href="todas-las-herramientas.html">Herramientas</a> |
+
+<a href="sobre-nosotros.html">Sobre nosotros</a> |
+
+<a href="contacto.html">Contacto</a> |
+
+<a href="privacidad.html">Privacidad</a> |
+
+<a href="cookies.html">Cookies</a> |
+
+<a href="aviso-legal.html">Aviso legal</a>
+
+</p>
+
+<p>© 2026 Herramientas Online</p>
+
+</footer>
+
+<button id="subir">⬆️</button>
+
+<script>
+
+const boton=document.getElementById("subir");
+
+window.onscroll=function(){
+
+if(window.scrollY>300){
+
+boton.style.display="block";
+
+}else{
+
+boton.style.display="none";
+
+}
+
+};
+
+boton.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+</script>
 
 </body>
 </html>
