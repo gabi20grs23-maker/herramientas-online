@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Regla de Tres | Herramientas Online</title>
+
+<meta name="description" content="Resuelve reglas de tres simples de forma rápida y gratuita.">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo.png">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+<a href="index.html">
+<img src="logo.png" alt="Herramientas Online">
+</a>
+<span>Herramientas Online</span>
+</div>
+
+<ul class="menu">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+
+</nav>
+
+<header class="hero">
+<h1>Calculadora de Regla de Tres</h1>
+<p>Resuelve una regla de tres simple en segundos.</p>
+</header>
+
+<section style="max-width:700px;margin:auto;padding:30px;">
+
+<input id="a" type="number" placeholder="Valor A">
+
+<br><br>
+
+<input id="b" type="number" placeholder="Valor B">
+
+<br><br>
+
+<input id="c" type="number" placeholder="Valor C">
+
+<br><br>
+
+<button onclick="calcular()">Calcular</button>
+
+<h2 id="resultado"></h2>
+
+<hr>
+
+<h2>¿Qué es una regla de tres?</h2>
+
+<p>
+La regla de tres es un método matemático para calcular un valor desconocido a partir de tres valores conocidos.
+</p>
+
+</section>
+
+<script>
+
+function calcular(){
+
+const a=Number(document.getElementById("a").value);
+const b=Number(document.getElementById("b").value);
+const c=Number(document.getElementById("c").value);
+
+if(!a || !b || !c){
+
+document.getElementById("resultado").innerHTML="Introduce todos los valores.";
+
+return;
+
+}
+
+const x=(b*c)/a;
+
+document.getElementById("resultado").innerHTML=
+`Resultado: <strong>${x.toFixed(2)}</strong>`;
+
+}
+
+</script>
+
+</body>
+
+</html>
