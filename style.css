@@ -420,3 +420,27 @@ box-shadow:0 4px 12px rgba(0,0,0,.2);
 #subir:hover{
 background:#15803d;
 }
+footer{
+background:#14532d;
+color:white;
+padding:30px 20px;
+text-align:center;
+margin-top:50px;
+}
+
+footer h3{
+margin-bottom:10px;
+}
+
+footer p{
+margin:10px 0;
+}
+
+footer a{
+color:#86efac;
+text-decoration:none;
+}
+
+footer a:hover{
+text-decoration:underline;
+}
