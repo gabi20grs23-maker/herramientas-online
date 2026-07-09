@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculadora de Porcentajes | Herramientas Online</title>
 
-<meta name="description" content="Calcula porcentajes de forma rápida y gratuita.">
+<title>Calculadora de Porcentajes Gratis | Herramientas Online</title>
+
+<meta name="description" content="Calcula porcentajes online gratis. Descubre rápidamente cuánto es un porcentaje de cualquier cantidad con nuestra calculadora gratuita.">
 
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 
 <body>
 
-<nav>
+<nav class="navbar">
+
 <div class="logo">
-    <a href="index.html" style="color:white;text-decoration:none;">
-        🛠 Herramientas Online
-    </a>
+
+<a href="index.html">
+<img src="logo.png" alt="Herramientas Online">
+</a>
+
+<span>Herramientas Online</span>
+
 </div>
+
+<ul class="menu">
+<li><a href="index.html">🏠 Inicio</a></li>
+<li><a href="todas-las-herramientas.html">🛠 Herramientas</a></li>
+<li><a href="sobre-nosotros.html">ℹ️ Sobre nosotros</a></li>
+<li><a href="contacto.html">📩 Contacto</a></li>
+</ul>
+
 </nav>
 
 <header class="hero">
 
 <h1>Calculadora de Porcentajes</h1>
 
-<p>Calcula cualquier porcentaje en segundos.</p>
+<p>
+Calcula cualquier porcentaje de forma rápida, gratuita y desde cualquier dispositivo.
+</p>
 
 </header>
 
-<section style="max-width:700px;margin:auto;padding:30px;">
+<section class="herramienta">
 
-<label>Introduce una cantidad</label>
+<h2>Calcular porcentaje</h2>
+
+<label><strong>Cantidad</strong></label>
 
 <input
 id="numero"
@@ -40,38 +60,165 @@ placeholder="Ejemplo: 250">
 
 <br><br>
 
-<label>Porcentaje (%)</label>
+<label><strong>Porcentaje (%)</strong></label>
 
 <input
 id="porcentaje"
 type="number"
 placeholder="Ejemplo: 15">
 
-<br><br>
+<div style="margin-top:25px;display:flex;gap:15px;flex-wrap:wrap;">
 
 <button onclick="calcular()">
-Calcular
+📊 Calcular
 </button>
 
-<h2 id="resultado"></h2>
+<button onclick="limpiar()">
+🗑 Limpiar
+</button>
+
+</div>
+
+<div id="resultado" class="resultado" style="display:none;"></div>
+
+<hr style="margin:50px 0;">
+
+<h2>¿Cómo funciona esta calculadora?</h2>
+
+<p>
+Solo tienes que introducir una cantidad y el porcentaje que deseas calcular. La herramienta mostrará el resultado inmediatamente.
+</p>
+
+<h2 style="margin-top:40px;">¿Para qué sirve?</h2>
+
+<ul>
+
+<li>✅ Calcular descuentos.</li>
+
+<li>✅ Calcular impuestos.</li>
+
+<li>✅ Obtener comisiones.</li>
+
+<li>✅ Resolver ejercicios y cálculos diarios.</li>
+
+</ul>
+
+<hr style="margin:50px 0;">
+
+<h2>Preguntas frecuentes</h2>
+
+<h3>¿La calculadora es gratuita?</h3>
+
+<p>Sí, puedes utilizarla tantas veces como quieras.</p>
+
+<h3>¿Funciona desde el móvil?</h3>
+
+<p>Sí. Es totalmente compatible con móviles, tablets y ordenadores.</p>
+
+<h3>¿Es necesario registrarse?</h3>
+
+<p>No. Todas las herramientas son gratuitas y sin registro.</p>
+
+<hr style="margin:50px 0;">
+
+<h2>Herramientas relacionadas</h2>
+
+<ul>
+
+<li><a href="calculadora-descuentos.html">💸 Calculadora de Descuentos</a></li>
+
+<li><a href="calculadora-iva.html">🧮 Calculadora de IVA</a></li>
+
+<li><a href="calculadora-imc.html">⚖️ Calculadora de IMC</a></li>
+
+<li><a href="calculadora-edad.html">🎂 Calculadora de Edad</a></li>
+
+</ul>
+
+<p style="text-align:center;margin-top:40px;">
+
+<a href="index.html">
+<button>🏠 Volver al inicio</button>
+</a>
+
+</p>
 
 </section>
+<footer>
+
+<h3>Herramientas Online</h3>
+
+<p>
+Calculadoras, conversores y utilidades gratuitas para cualquier momento.
+</p>
+
+<p>
+<a href="todas-las-herramientas.html">Herramientas</a> |
+<a href="sobre-nosotros.html">Sobre nosotros</a> |
+<a href="contacto.html">Contacto</a> |
+<a href="privacidad.html">Privacidad</a> |
+<a href="cookies.html">Cookies</a> |
+<a href="aviso-legal.html">Aviso legal</a>
+</p>
+
+<p>© 2026 Herramientas Online</p>
+
+</footer>
 
 <script>
 
 function calcular(){
 
-let numero=
-Number(document.getElementById("numero").value);
+const numero = Number(document.getElementById("numero").value);
 
-let porcentaje=
-Number(document.getElementById("porcentaje").value);
+const porcentaje = Number(document.getElementById("porcentaje").value);
 
-let resultado=
-numero*porcentaje/100;
+const resultado = document.getElementById("resultado");
 
-document.getElementById("resultado").innerHTML=
-porcentaje+"% de "+numero+" = <strong>"+resultado.toFixed(2)+"</strong>";
+if(numero<=0 || porcentaje<0){
+
+resultado.style.display="block";
+
+resultado.innerHTML=`
+<h3>⚠ Error</h3>
+<p>Introduce una cantidad y un porcentaje válidos.</p>
+`;
+
+return;
+
+}
+
+const total = numero*porcentaje/100;
+
+resultado.style.display="block";
+
+resultado.innerHTML=`
+
+<h3>📊 Resultado</h3>
+
+<p><strong>Cantidad:</strong> ${numero.toFixed(2)}</p>
+
+<p><strong>Porcentaje:</strong> ${porcentaje}%</p>
+
+<p style="font-size:24px;color:#16a34a;margin-top:15px;">
+
+<strong>${porcentaje}% de ${numero} = ${total.toFixed(2)}</strong>
+
+</p>
+
+`;
+
+}
+
+function limpiar(){
+
+document.getElementById("numero").value="";
+
+document.getElementById("porcentaje").value="";
+
+document.getElementById("resultado").style.display="none";
+
+document.getElementById("resultado").innerHTML="";
 
 }
 
