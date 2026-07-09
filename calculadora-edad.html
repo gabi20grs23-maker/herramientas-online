@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Calculadora de Edad | Herramientas Online</title>
+<title>Calculadora de Edad Gratis | Calcula tu Edad Exacta | Herramientas Online</title>
 
-<meta name="description" content="Calcula tu edad exacta en años, meses y días de forma gratuita.">
+<meta name="description" content="Calcula tu edad exacta en años, meses y días de forma gratuita. Herramienta online rápida, sencilla y compatible con móviles.">
 
 <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="logo.png">
+<link rel="icon" type="image/png" href="favicon.png">
 
 </head>
 
@@ -18,56 +19,145 @@
 <nav class="navbar">
 
 <div class="logo">
+
 <a href="index.html">
 <img src="logo.png" alt="Herramientas Online">
 </a>
+
 <span>Herramientas Online</span>
+
 </div>
 
 <ul class="menu">
-<li><a href="index.html">Inicio</a></li>
-<li><a href="contacto.html">Contacto</a></li>
+<li><a href="index.html">🏠 Inicio</a></li>
+<li><a href="todas-las-herramientas.html">🛠 Herramientas</a></li>
+<li><a href="sobre-nosotros.html">ℹ️ Sobre nosotros</a></li>
+<li><a href="contacto.html">📩 Contacto</a></li>
 </ul>
 
 </nav>
 
 <header class="hero">
+
 <h1>Calculadora de Edad</h1>
-<p>Calcula tu edad exacta en segundos.</p>
+
+<p>
+Calcula tu edad exacta en años, meses y días de forma gratuita.
+</p>
+
 </header>
 
-<section style="max-width:700px;margin:auto;padding:30px;">
+<section class="herramienta">
 
-<label>Fecha de nacimiento</label>
+<h2>Calcula tu edad</h2>
 
-<input id="fecha" type="date">
+<label for="fecha"><strong>Fecha de nacimiento</strong></label>
 
-<br><br>
+<input
+id="fecha"
+type="date">
+
+<div style="margin-top:25px;display:flex;gap:15px;flex-wrap:wrap;">
 
 <button onclick="calcularEdad()">
-Calcular edad
+🎂 Calcular edad
 </button>
 
-<h2 id="resultado"></h2>
+<button onclick="limpiarEdad()">
+🗑 Limpiar
+</button>
+
+</div>
+
+<div id="resultado" class="resultado" style="display:none;"></div>
+
 <div id="detalleEdad"></div>
 
-<hr style="margin:40px 0;">
+<hr style="margin:50px 0;">
 
 <h2>¿Cómo funciona esta calculadora?</h2>
 
 <p>
-Introduce tu fecha de nacimiento y la herramienta calculará automáticamente tu edad utilizando la fecha actual.
+
+Solo tienes que seleccionar tu fecha de nacimiento. La calculadora comparará esa fecha con el día actual y mostrará automáticamente tu edad exacta.
+
 </p>
 
-<h3>¿Para qué sirve?</h3>
+<h2 style="margin-top:40px;">¿Para qué sirve?</h2>
 
 <ul>
-<li>Conocer tu edad exacta.</li>
-<li>Rellenar formularios.</li>
-<li>Comprobar la edad de otra persona.</li>
+
+<li>✅ Conocer tu edad exacta.</li>
+
+<li>✅ Completar formularios.</li>
+
+<li>✅ Calcular la edad de otra persona.</li>
+
+<li>✅ Saber los días y meses aproximados vividos.</li>
+
 </ul>
 
+<hr style="margin:50px 0;">
+
+<h2>Preguntas frecuentes</h2>
+
+<h3>¿La calculadora es gratuita?</h3>
+
+<p>Sí. Puedes utilizarla todas las veces que quieras sin registrarte.</p>
+
+<h3>¿Funciona desde el móvil?</h3>
+
+<p>Sí. Es totalmente compatible con móviles, tablets y ordenadores.</p>
+
+<h3>¿Los meses y días son exactos?</h3>
+
+<p>Los años son exactos. Los meses y días mostrados son una aproximación útil basada en la diferencia entre fechas.</p>
+
+<hr style="margin:50px 0;">
+
+<h2>Herramientas relacionadas</h2>
+
+<ul>
+
+<li><a href="calculadora-imc.html">⚖️ Calculadora de IMC</a></li>
+
+<li><a href="calculadora-iva.html">🧮 Calculadora de IVA</a></li>
+
+<li><a href="calculadora-descuentos.html">💸 Calculadora de Descuentos</a></li>
+
+<li><a href="calculadora-porcentajes.html">📊 Calculadora de Porcentajes</a></li>
+
+</ul>
+
+<p style="text-align:center;margin-top:40px;">
+
+<a href="index.html">
+<button>🏠 Volver al inicio</button>
+</a>
+
+</p>
+
 </section>
+<footer>
+
+<h3>Herramientas Online</h3>
+
+<p>
+Calculadoras, conversores y utilidades gratuitas para cualquier momento.
+</p>
+
+<p>
+<a href="todas-las-herramientas.html">Herramientas</a> |
+<a href="sobre-nosotros.html">Sobre nosotros</a> |
+<a href="contacto.html">Contacto</a> |
+<a href="privacidad.html">Privacidad</a> |
+<a href="cookies.html">Cookies</a> |
+<a href="aviso-legal.html">Aviso legal</a>
+</p>
+
+<p>© 2026 Herramientas Online</p>
+
+</footer>
 
 <script>
 
@@ -75,16 +165,20 @@ function calcularEdad(){
 
 const fecha=document.getElementById("fecha").value;
 
+const resultado=document.getElementById("resultado");
+const detalle=document.getElementById("detalleEdad");
+
 if(!fecha){
 
-document.getElementById("resultado").innerHTML="Selecciona una fecha.";
+resultado.style.display="block";
+resultado.innerHTML="<h3>⚠ Error</h3><p>Selecciona una fecha de nacimiento válida.</p>";
+detalle.innerHTML="";
 
 return;
 
 }
 
 const nacimiento=new Date(fecha);
-
 const hoy=new Date();
 
 let edad=hoy.getFullYear()-nacimiento.getFullYear();
@@ -97,19 +191,43 @@ edad--;
 
 }
 
-const diferencia = hoy - nacimiento;
+const diferencia=hoy-nacimiento;
 
-const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+const dias=Math.floor(diferencia/(1000*60*60*24));
 
-const meses = Math.floor(dias / 30.44);
+const meses=Math.floor(dias/30.44);
 
-document.getElementById("resultado").innerHTML =
-`Tienes <strong>${edad}</strong> años`;
+resultado.style.display="block";
 
-document.getElementById("detalleEdad").innerHTML = `
-<p><strong>Meses aproximados:</strong> ${meses}</p>
-<p><strong>Días aproximados:</strong> ${dias}</p>
-`; 
+resultado.innerHTML=`
+
+<h3>🎉 Resultado</h3>
+
+<p>
+Tienes <strong>${edad}</strong> años.
+</p>
+
+`;
+
+detalle.innerHTML=`
+
+<p><strong>📅 Meses aproximados:</strong> ${meses}</p>
+
+<p><strong>🗓️ Días aproximados:</strong> ${dias}</p>
+
+`;
+
+}
+
+function limpiarEdad(){
+
+document.getElementById("fecha").value="";
+
+document.getElementById("resultado").style.display="none";
+
+document.getElementById("resultado").innerHTML="";
+
+document.getElementById("detalleEdad").innerHTML="";
 
 }
 
@@ -117,12 +235,3 @@ document.getElementById("detalleEdad").innerHTML = `
 
 </body>
 </html>
-<hr style="margin:40px 0;">
-
-<h2>También te puede interesar</h2>
-
-<ul>
-<li><a href="calculadora-imc.html">Calculadora de IMC</a></li>
-<li><a href="calculadora-descuentos.html">Calculadora de Descuentos</a></li>
-<li><a href="calculadora-iva.html">Calculadora de IVA</a></li>
-</ul>
