@@ -1,51 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sobre nosotros | Herramientas Online</title>
+<title>Sobre Nosotros | Herramientas Online</title>
 
-<meta name="description" content="Conoce el proyecto Herramientas Online y nuestra misión de ofrecer utilidades gratuitas.">
+<meta name="description" content="Conoce Herramientas Online, un proyecto creado para ofrecer calculadoras, conversores y herramientas gratuitas, rápidas y fáciles de utilizar desde cualquier dispositivo.">
+
+<meta name="keywords" content="sobre herramientas online, calculadoras gratis, conversores online, herramientas gratuitas">
 
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="logo.png">
+<link rel="icon" href="favicon.png">
+
 </head>
 
 <body>
 
 <nav class="navbar">
+
 <div class="logo">
 <a href="index.html">
 <img src="logo.png" alt="Herramientas Online">
 </a>
 <span>Herramientas Online</span>
 </div>
+
+<ul class="menu">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="todas-las-herramientas.html">Herramientas</a></li>
+<li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+
 </nav>
 
-<section style="max-width:900px;margin:50px auto;padding:20px;">
+<header class="hero">
 
-<h1>Sobre nosotros</h1>
+<h1>Sobre Herramientas Online</h1>
 
 <p>
-Herramientas Online es un proyecto creado para ofrecer calculadoras, conversores y utilidades gratuitas, rápidas y fáciles de usar desde cualquier dispositivo.
+Conoce quiénes somos y cuál es nuestro objetivo.
+</p>
+
+</header>
+
+<section style="max-width:900px;margin:auto;padding:30px;">
+
+<h2>Nuestra misión</h2>
+
+<p>
+Herramientas Online nace con el objetivo de ofrecer calculadoras, conversores y utilidades gratuitas que cualquier persona pueda utilizar desde su navegador de forma rápida y sencilla.
 </p>
 
 <p>
-Nuestro objetivo es que cualquier persona pueda resolver cálculos cotidianos sin instalar aplicaciones ni registrarse.
+Queremos que realizar cálculos cotidianos sea fácil, sin necesidad de descargar aplicaciones ni crear una cuenta.
+</p>
+
+<hr style="margin:50px 0;">
+
+<h2>¿Qué ofrecemos?</h2>
+
+<ul>
+
+<li>🧮 Calculadoras online gratuitas.</li>
+
+<li>📊 Herramientas para porcentajes, descuentos e IVA.</li>
+
+<li>🎂 Calculadoras de edad e IMC.</li>
+
+<li>🌡️ Conversores de temperatura.</li>
+
+<li>📐 Utilidades matemáticas como la regla de tres.</li>
+
+<li>🚀 Nuevas herramientas añadidas de forma periódica.</li>
+
+</ul>
+
+<hr style="margin:50px 0;">
+
+<h2>Nuestro compromiso</h2>
+
+<p>
+Trabajamos para ofrecer una web rápida, sencilla y compatible con ordenadores, tablets y teléfonos móviles.
 </p>
 
 <p>
-Seguimos mejorando la web continuamente, añadiendo nuevas herramientas y optimizando la experiencia de uso.
+Además, buscamos mejorar continuamente el contenido y añadir nuevas herramientas que resulten útiles para estudiantes, trabajadores y cualquier usuario.
 </p>
 
-<p style="margin-top:40px;">
+<hr style="margin:50px 0;">
+
+<h2>Preguntas frecuentes</h2>
+
+<h3>¿Las herramientas son gratuitas?</h3>
+
+<p>
+Sí. Todas las herramientas disponibles pueden utilizarse sin coste.
+</p>
+
+<h3>¿Necesito registrarme?</h3>
+
+<p>
+No. Puedes utilizar todas las calculadoras sin crear una cuenta.
+</p>
+
+<h3>¿Añadís nuevas herramientas?</h3>
+
+<p>
+Sí. Seguimos ampliando la web con nuevas calculadoras, conversores y utilidades.
+</p>
+
+<p style="text-align:center;margin-top:50px;">
+
+<a href="todas-las-herramientas.html">
+<button>🛠️ Ver todas las herramientas</button>
+</a>
+
 <a href="index.html">
 <button>🏠 Volver al inicio</button>
 </a>
+
 </p>
 
 </section>
+
+<footer>
+
+<h3>Herramientas Online</h3>
+
+<p>
+Calculadoras, conversores y herramientas online gratuitas para cualquier momento.
+</p>
+
+<p>
+
+<a href="todas-las-herramientas.html">Herramientas</a> |
+
+<a href="sobre-nosotros.html">Sobre nosotros</a> |
+
+<a href="contacto.html">Contacto</a> |
+
+<a href="privacidad.html">Privacidad</a> |
+
+<a href="cookies.html">Cookies</a> |
+
+<a href="aviso-legal.html">Aviso legal</a>
+
+</p>
+
+<p>© 2026 Herramientas Online</p>
+
+</footer>
+
+<button id="subir">⬆️</button>
+
+<script>
+
+const boton=document.getElementById("subir");
+
+window.onscroll=function(){
+
+if(window.scrollY>300){
+
+boton.style.display="block";
+
+}else{
+
+boton.style.display="none";
+
+}
+
+};
+
+boton.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+</script>
 
 </body>
 </html>
