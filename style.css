@@ -37,16 +37,11 @@
 ======================================================= */
 
 body{
-
-    font-family:Arial,Helvetica,sans-serif;
-
-    background:var(--fondo);
-
-    color:var(--texto);
-
-    line-height:1.6;
-
+font-family:Arial,Helvetica,sans-serif;
+background:#f8fafc;
+color:#1f2937;
 }
+
 
 /* =======================================================
    ENLACES
@@ -63,61 +58,41 @@ a{
 ======================================================= */
 
 .navbar{
-
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:15px 40px;
-
-    background:var(--azul);
-
-    box-shadow:0 2px 12px rgba(0,0,0,.12);
-
-    flex-wrap:wrap;
-
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#166534;
+flex-wrap:wrap;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
 .logo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    font-size:24px;
-
-    font-weight:bold;
-
-    color:white;
-
+display:flex;
+align-items:center;
+gap:18px;
+font-size:30px;
+font-weight:700;
+color:white;
 }
 
 .logo img{
-
-    width:120px;
-
-    height:auto;
-
+width:200px;
+height:auto;
+transition:.3s;
 }
 
-.menu{
-
-    display:flex;
-
-    list-style:none;
-
-    gap:25px;
-
+.menu a{
+color:white;
+text-decoration:none;
+font-size:18px;
+font-weight:600;
+padding:10px 14px;
+border-radius:8px;
+transition:.3s;
 }
 
 .menu a{
@@ -131,9 +106,8 @@ a{
 }
 
 .menu a:hover{
-
-    color:#bbf7d0;
-
+background:rgba(255,255,255,.15);
+color:white;
 }
 
 /* =======================================================
