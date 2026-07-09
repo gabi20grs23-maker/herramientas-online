@@ -304,5 +304,25 @@ card.style.display="none";
 });
 
 </script>
+<button id="subir">⬆️</button>
+
+<script>
+const boton = document.getElementById("subir");
+
+window.onscroll = function () {
+    if (window.scrollY > 300) {
+        boton.style.display = "block";
+    } else {
+        boton.style.display = "none";
+    }
+};
+
+boton.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
+</script>
 </body>
 </html>
