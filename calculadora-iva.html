@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Calculadora de IVA | Herramientas Online</title>
+<title>Calculadora de IVA Gratis | Calcular IVA 21%, 10% y 4%</title>
 
-<meta name="description" content="Calcula el IVA de cualquier importe de forma gratuita y rápida.">
+<meta name="description" content="Calcula el IVA online gratis. Obtén el precio sin IVA, el importe del IVA y el total con IVA en segundos. Compatible con los tipos de IVA del 21%, 10% y 4%.">
 
+<meta name="keywords" content="calculadora IVA, calcular IVA, IVA 21%, IVA 10%, IVA 4%, impuesto valor añadido">
+
+<meta name="author" content="Herramientas Online">
+
+<link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="favicon.png">
 
 </head>
 
@@ -18,119 +24,252 @@
 <nav class="navbar">
 
 <div class="logo">
+
 <a href="index.html">
+
 <img src="logo.png" alt="Herramientas Online">
+
 </a>
+
 <span>Herramientas Online</span>
+
 </div>
 
 <ul class="menu">
+
 <li><a href="index.html">🏠 Inicio</a></li>
-<li><a href="todas-las-herramientas.html">🛠️ Herramientas</a></li>
+
+<li><a href="todas-las-herramientas.html">🛠 Herramientas</a></li>
+
 <li><a href="sobre-nosotros.html">ℹ️ Sobre nosotros</a></li>
+
 <li><a href="contacto.html">📩 Contacto</a></li>
+
 </ul>
 
 </nav>
 
 <header class="hero">
+
 <h1>Calculadora de IVA</h1>
-<p>Calcula el precio con IVA o sin IVA en segundos.</p>
+
+<p>
+
+Calcula rápidamente el precio con IVA, el importe del impuesto y el precio base.
+
+</p>
+
 </header>
 
-<section style="max-width:600px;margin:auto;padding:20px;">
+<section class="presentacion">
 
-<input id="precio" type="number" placeholder="Introduce el importe">
+<div class="card">
+
+<h2>🧮 Calcula el IVA</h2>
+
+<p>
+
+Introduce un importe y selecciona el tipo de IVA.
+
+</p>
+
+<br>
+
+<input
+type="number"
+id="precio"
+placeholder="Ejemplo: 100">
 
 <br><br>
 
 <select id="iva">
-<option value="21">21%</option>
-<option value="10">10%</option>
-<option value="4">4%</option>
+
+<option value="21">IVA General (21%)</option>
+
+<option value="10">IVA Reducido (10%)</option>
+
+<option value="4">IVA Superreducido (4%)</option>
+
 </select>
 
 <br><br>
 
-<button onclick="calcularIVA()">Calcular</button>
+<div class="hero-buttons">
 
-<h2 id="resultado"></h2>
+<button onclick="calcularIVA()">
 
-<hr style="margin:40px 0;">
+Calcular IVA
 
-<h2>¿Cómo calcular el IVA?</h2>
+</button>
+
+<button onclick="limpiarIVA()">
+
+Limpiar
+
+</button>
+
+</div>
+
+<div id="resultado" style="margin-top:30px;"></div>
+
+</div>
+
+</section>
+
+<section class="presentacion">
+
+<h2>¿Qué es el IVA?</h2>
 
 <p>
-El IVA (Impuesto sobre el Valor Añadido) es un impuesto que se aplica a la mayoría de productos y servicios.
-Con esta calculadora puedes conocer el precio final incluyendo el IVA de forma rápida.
+
+El IVA (Impuesto sobre el Valor Añadido) es un impuesto indirecto aplicado al consumo de bienes y servicios. En España existen tres tipos principales: el 21 %, el 10 % y el 4 %.
+
 </p>
 
-<h3>Ejemplo</h3>
+<h2>Ejemplo práctico</h2>
 
 <p>
-Si un producto cuesta 100 € y el IVA es del 21 %, el precio final será de 121 €.
+
+Si un producto cuesta <strong>100 €</strong> y aplicamos un IVA del <strong>21 %</strong>, el impuesto será de <strong>21 €</strong> y el precio final será de <strong>121 €</strong>.
+
 </p>
 
-<h3>¿Qué tipos de IVA existen en España?</h3>
+<h2>Tipos de IVA en España</h2>
 
 <ul>
-<li>21 % - Tipo general.</li>
-<li>10 % - Tipo reducido.</li>
-<li>4 % - Tipo superreducido.</li>
+
+<li>✅ 21 % → Tipo general.</li>
+
+<li>✅ 10 % → Tipo reducido.</li>
+
+<li>✅ 4 % → Tipo superreducido.</li>
+
 </ul>
 
-<hr>
+<hr style="margin:50px 0;">
 
 <h2>Preguntas frecuentes</h2>
 
-<h3>¿Qué es el IVA?</h3>
+<h3>¿La calculadora de IVA es gratuita?</h3>
 
 <p>
-El IVA (Impuesto sobre el Valor Añadido) es un impuesto que se aplica al consumo de bienes y servicios.
+
+Sí. Puedes utilizarla tantas veces como quieras.
+
 </p>
 
-<h3>¿Cómo se calcula el IVA?</h3>
+<h3>¿Funciona desde el móvil?</h3>
 
 <p>
-Multiplica el precio sin IVA por el porcentaje correspondiente y súmalo al importe original.
+
+Sí. Está adaptada para móviles, tablets y ordenadores.
+
 </p>
 
-<h3>¿Qué tipos de IVA existen en España?</h3>
+<h3>¿Qué tipos de IVA calcula?</h3>
 
 <p>
-Los tipos más habituales son el 21 %, el 10 % y el 4 %, dependiendo del producto o servicio.
+
+Actualmente calcula automáticamente el IVA del 21 %, 10 % y 4 %.
+
 </p>
 
-<p style="text-align:center;margin-top:40px;">
-<a href="index.html">
-<button>🏠 Volver al inicio</button>
-</a>
+<hr style="margin:50px 0;">
+
+<h2>Herramientas relacionadas</h2>
+
+<ul>
+
+<li><a href="calculadora-porcentajes.html">📊 Calculadora de Porcentajes</a></li>
+
+<li><a href="calculadora-descuentos.html">💸 Calculadora de Descuentos</a></li>
+
+<li><a href="calculadora-regla-de-tres.html">📐 Regla de Tres</a></li>
+
+</ul>
+<footer>
+
+<h3>Herramientas Online</h3>
+
+<p>
+Calculadoras, conversores y herramientas online gratuitas para cualquier momento.
 </p>
 
-</section>
+<p>
+
+<a href="index.html">Inicio</a> |
+
+<a href="todas-las-herramientas.html">Herramientas</a> |
+
+<a href="sobre-nosotros.html">Sobre nosotros</a> |
+
+<a href="contacto.html">Contacto</a>
+
+</p>
+
+<p>© <span id="year"></span> Herramientas Online</p>
+
+</footer>
+
+<button id="subir" aria-label="Volver arriba">⬆️</button>
+
+<script src="script.js"></script>
 
 <script>
 
 function calcularIVA(){
 
-let precio = Number(document.getElementById("precio").value);
+const precio = Number(document.getElementById("precio").value);
 
-let iva = Number(document.getElementById("iva").value);
+const iva = Number(document.getElementById("iva").value);
 
-if(!precio){
+const resultado = document.getElementById("resultado");
 
-document.getElementById("resultado").innerHTML="Introduce un importe válido.";
+if(precio <= 0){
+
+resultado.innerHTML = `
+<div class="card">
+<p>⚠️ Introduce un importe válido.</p>
+</div>
+`;
 
 return;
 
 }
 
-let total = precio + (precio * iva / 100);
+const importeIVA = precio * iva / 100;
 
-document.getElementById("resultado").innerHTML =
-"Total con IVA: <strong>" + total.toFixed(2) + " €</strong>";
+const total = precio + importeIVA;
+
+resultado.innerHTML = `
+
+<div class="card">
+
+<h2>Resultado</h2>
+
+<p><strong>Precio sin IVA:</strong> ${precio.toFixed(2)} €</p>
+
+<p><strong>IVA (${iva}%):</strong> ${importeIVA.toFixed(2)} €</p>
+
+<p><strong>Total con IVA:</strong> ${total.toFixed(2)} €</p>
+
+</div>
+
+`;
 
 }
+
+function limpiarIVA(){
+
+document.getElementById("precio").value="";
+
+document.getElementById("resultado").innerHTML="";
+
+document.getElementById("precio").focus();
+
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
 
 </script>
 
