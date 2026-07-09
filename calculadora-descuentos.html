@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Calculadora de Descuentos | Herramientas Online</title>
+<title>Calculadora de Descuentos Gratis | Herramientas Online</title>
 
-<meta name="description" content="Calcula descuentos de forma rápida y gratuita.">
+<meta name="description" content="Calcula descuentos online de forma gratuita. Descubre cuánto ahorras y cuál es el precio final de cualquier producto en segundos.">
 
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 
 <body>
@@ -27,8 +29,10 @@
 </div>
 
 <ul class="menu">
-<li><a href="index.html">Inicio</a></li>
-<li><a href="contacto.html">Contacto</a></li>
+<li><a href="index.html">🏠 Inicio</a></li>
+<li><a href="todas-las-herramientas.html">🛠 Herramientas</a></li>
+<li><a href="sobre-nosotros.html">ℹ️ Sobre nosotros</a></li>
+<li><a href="contacto.html">📩 Contacto</a></li>
 </ul>
 
 </nav>
@@ -37,70 +41,190 @@
 
 <h1>Calculadora de Descuentos</h1>
 
-<p>Calcula el precio final de cualquier producto después de aplicar un descuento.</p>
+<p>
+Calcula el precio final de cualquier producto y descubre cuánto dinero ahorras.
+</p>
 
 </header>
 
-<section style="max-width:700px;margin:auto;padding:30px;">
+<section class="herramienta">
 
-<label>Precio original (€)</label>
+<h2>Calcular descuento</h2>
 
-<input id="precio" type="number" placeholder="Ejemplo: 120">
+<label><strong>Precio original (€)</strong></label>
+
+<input
+id="precio"
+type="number"
+placeholder="Ejemplo: 120">
 
 <br><br>
 
-<label>Descuento (%)</label>
+<label><strong>Descuento (%)</strong></label>
 
-<input id="descuento" type="number" placeholder="Ejemplo: 25">
+<input
+id="descuento"
+type="number"
+placeholder="Ejemplo: 25">
 
-<br><br>
+<div style="margin-top:25px;display:flex;gap:15px;flex-wrap:wrap;">
 
 <button onclick="calcularDescuento()">
-Calcular
+💸 Calcular
 </button>
 
-<h2 id="resultado"></h2>
+<button onclick="limpiarDescuento()">
+🗑 Limpiar
+</button>
 
-<hr style="margin:40px 0;">
+</div>
 
-<h2>¿Cómo funciona?</h2>
+<div id="resultado" class="resultado" style="display:none;"></div>
+
+<hr style="margin:50px 0;">
+
+<h2>¿Cómo funciona esta calculadora?</h2>
 
 <p>
-Introduce el precio original y el porcentaje de descuento. La herramienta calculará automáticamente el importe descontado y el precio final.
+
+Introduce el precio original del producto y el porcentaje de descuento. La herramienta calculará automáticamente cuánto dinero ahorras y cuál será el precio final.
+
 </p>
 
-<h3>Ejemplo</h3>
+<h2 style="margin-top:40px;">¿Para qué sirve?</h2>
 
-<p>
-Un producto de 120 € con un 25 % de descuento costará 90 €.
+<ul>
+
+<li>✅ Calcular ofertas y rebajas.</li>
+
+<li>✅ Saber cuánto vas a ahorrar.</li>
+
+<li>✅ Comparar precios fácilmente.</li>
+
+<li>✅ Evitar hacer cálculos manuales.</li>
+
+</ul>
+
+<hr style="margin:50px 0;">
+
+<h2>Preguntas frecuentes</h2>
+
+<h3>¿La calculadora es gratuita?</h3>
+
+<p>Sí. Puedes utilizarla todas las veces que quieras.</p>
+
+<h3>¿Puedo calcular cualquier porcentaje?</h3>
+
+<p>Sí, puedes introducir cualquier porcentaje de descuento.</p>
+
+<h3>¿Funciona en móviles?</h3>
+
+<p>Sí. Está optimizada para teléfonos, tablets y ordenadores.</p>
+
+<hr style="margin:50px 0;">
+
+<h2>Herramientas relacionadas</h2>
+
+<ul>
+
+<li><a href="calculadora-iva.html">🧮 Calculadora de IVA</a></li>
+
+<li><a href="calculadora-porcentajes.html">📊 Calculadora de Porcentajes</a></li>
+
+<li><a href="calculadora-imc.html">⚖️ Calculadora de IMC</a></li>
+
+<li><a href="calculadora-edad.html">🎂 Calculadora de Edad</a></li>
+
+</ul>
+
+<p style="text-align:center;margin-top:40px;">
+
+<a href="index.html">
+<button>🏠 Volver al inicio</button>
+</a>
+
 </p>
 
 </section>
+<footer>
+
+<h3>Herramientas Online</h3>
+
+<p>
+Calculadoras, conversores y utilidades gratuitas para cualquier momento.
+</p>
+
+<p>
+<a href="todas-las-herramientas.html">Herramientas</a> |
+<a href="sobre-nosotros.html">Sobre nosotros</a> |
+<a href="contacto.html">Contacto</a> |
+<a href="privacidad.html">Privacidad</a> |
+<a href="cookies.html">Cookies</a> |
+<a href="aviso-legal.html">Aviso legal</a>
+</p>
+
+<p>© 2026 Herramientas Online</p>
+
+</footer>
 
 <script>
 
 function calcularDescuento(){
 
-const precio=Number(document.getElementById("precio").value);
+const precio = Number(document.getElementById("precio").value);
 
-const descuento=Number(document.getElementById("descuento").value);
+const descuento = Number(document.getElementById("descuento").value);
 
-if(!precio || descuento<0){
+const resultado = document.getElementById("resultado");
 
-document.getElementById("resultado").innerHTML="Introduce valores válidos.";
+if(precio<=0 || descuento<0 || descuento>100){
+
+resultado.style.display="block";
+
+resultado.innerHTML=`
+<h3>⚠ Error</h3>
+<p>Introduce un precio válido y un descuento entre 0 y 100 %.</p>
+`;
 
 return;
 
 }
 
-const ahorro=precio*descuento/100;
+const ahorro = precio*descuento/100;
 
-const final=precio-ahorro;
+const final = precio-ahorro;
 
-document.getElementById("resultado").innerHTML=
+resultado.style.display="block";
 
-`Ahorras <strong>${ahorro.toFixed(2)} €</strong><br>
-Precio final: <strong>${final.toFixed(2)} €</strong>`;
+resultado.innerHTML=`
+
+<h3>💰 Resultado</h3>
+
+<p><strong>Precio original:</strong> ${precio.toFixed(2)} €</p>
+
+<p><strong>Descuento aplicado:</strong> ${descuento}%</p>
+
+<p><strong>Ahorras:</strong> ${ahorro.toFixed(2)} €</p>
+
+<p style="font-size:24px;color:#16a34a;margin-top:15px;">
+
+<strong>Precio final: ${final.toFixed(2)} €</strong>
+
+</p>
+
+`;
+
+}
+
+function limpiarDescuento(){
+
+document.getElementById("precio").value="";
+
+document.getElementById("descuento").value="";
+
+document.getElementById("resultado").style.display="none";
+
+document.getElementById("resultado").innerHTML="";
 
 }
 
