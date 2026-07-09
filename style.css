@@ -159,9 +159,8 @@ footer{
 }
 
 .logo img{
-    width:45px;
-    height:45px;
-    border-radius:10px;
+    width:120px;
+    height:auto;
 }
 .navbar{
 display:flex;
