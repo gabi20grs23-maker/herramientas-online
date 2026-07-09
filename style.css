@@ -29,8 +29,9 @@ nav{
 }
 
 .hero h1{
-    font-size:48px;
-    margin-bottom:20px;
+    font-size:38px;
+    margin-bottom:15px;
+    line-height:1.2;
 }
 
 .hero p{
