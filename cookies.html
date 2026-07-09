@@ -1,54 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Política de Cookies | Herramientas Online</title>
-<meta name="description" content="Política de cookies de Herramientas Online.">
+
+<meta name="description" content="Consulta la política de cookies de Herramientas Online y conoce cómo utilizamos las cookies en nuestro sitio web.">
+
+<meta name="keywords" content="cookies, política de cookies, privacidad, herramientas online">
+
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 
 <body>
 
-<nav>
+<nav class="navbar">
+
 <div class="logo">
-<a href="index.html" style="color:white;text-decoration:none;">
-🛠 Herramientas Online
+
+<a href="index.html">
+<img src="logo.png" alt="Herramientas Online">
 </a>
+
+<span>Herramientas Online</span>
+
 </div>
+
+<ul class="menu">
+
+<li><a href="index.html">Inicio</a></li>
+
+<li><a href="todas-las-herramientas.html">Herramientas</a></li>
+
+<li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+
+<li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
 </nav>
 
 <header class="hero">
+
 <h1>Política de Cookies</h1>
-<p>Información sobre el uso de cookies en esta web.</p>
+
+<p>
+Información sobre el uso de cookies en Herramientas Online.
+</p>
+
 </header>
 
-<section style="max-width:900px;margin:auto;padding:30px;line-height:1.8;">
+<section style="max-width:900px;margin:auto;padding:30px;line-height:1.9;">
 
 <h2>¿Qué son las cookies?</h2>
 
 <p>
-Las cookies son pequeños archivos que se almacenan en tu dispositivo para mejorar la experiencia de navegación.
+Las cookies son pequeños archivos de texto que un sitio web almacena en tu dispositivo cuando lo visitas. Su finalidad es recordar información sobre tu navegación para mejorar la experiencia del usuario.
 </p>
 
-<h2>¿Qué cookies usamos?</h2>
+<h2>¿Qué cookies utilizamos?</h2>
 
 <p>
-Actualmente esta web utiliza únicamente las cookies necesarias para su funcionamiento. En el futuro podrán utilizarse cookies de análisis y publicidad cuando se integren servicios como Google Analytics o Google AdSense.
+Actualmente Herramientas Online utiliza únicamente las cookies necesarias para el funcionamiento correcto del sitio web.
 </p>
 
-<h2>Cómo gestionar las cookies</h2>
+<p>
+En el futuro podrán incorporarse cookies de análisis, estadísticas o publicidad mediante servicios como Google Analytics o Google AdSense. En ese caso se actualizará esta política para informar a los usuarios de forma transparente.
+</p>
+
+<h2>¿Cómo puedes gestionar las cookies?</h2>
 
 <p>
-Puedes configurar tu navegador para aceptar, rechazar o eliminar las cookies en cualquier momento.
+Puedes configurar tu navegador para aceptar, bloquear o eliminar las cookies en cualquier momento. Ten en cuenta que desactivar determinadas cookies puede afectar al funcionamiento de algunas páginas.
+</p>
+
+<h2>Cookies de terceros</h2>
+
+<p>
+Si en el futuro utilizamos servicios externos, como herramientas de análisis o publicidad, dichos proveedores podrán instalar sus propias cookies de acuerdo con sus respectivas políticas de privacidad.
+</p>
+
+<h2>Actualizaciones</h2>
+
+<p>
+Esta política de cookies podrá modificarse cuando añadamos nuevas funcionalidades o exista algún cambio legal que así lo requiera.
+</p>
+
+<p style="text-align:center;margin-top:50px;">
+
+<a href="privacidad.html">
+<button>🔒 Política de privacidad</button>
+</a>
+
+<a href="index.html">
+<button>🏠 Volver al inicio</button>
+</a>
+
 </p>
 
 </section>
 
 <footer>
+
+<h3>Herramientas Online</h3>
+
+<p>
+Calculadoras, conversores y herramientas online gratuitas para cualquier momento.
+</p>
+
+<p>
+
+<a href="todas-las-herramientas.html">Herramientas</a> |
+
+<a href="sobre-nosotros.html">Sobre nosotros</a> |
+
+<a href="contacto.html">Contacto</a> |
+
+<a href="privacidad.html">Privacidad</a> |
+
+<a href="cookies.html">Cookies</a> |
+
+<a href="aviso-legal.html">Aviso legal</a>
+
+</p>
+
 <p>© 2026 Herramientas Online</p>
+
 </footer>
+
+<button id="subir">⬆️</button>
+
+<script>
+
+const boton=document.getElementById("subir");
+
+window.onscroll=function(){
+
+if(window.scrollY>300){
+
+boton.style.display="block";
+
+}else{
+
+boton.style.display="none";
+
+}
+
+};
+
+boton.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+</script>
 
 </body>
 </html>
