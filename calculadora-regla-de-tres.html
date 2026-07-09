@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Calculadora de Regla de Tres | Herramientas Online</title>
+<title>Calculadora de Regla de Tres Gratis | Herramientas Online</title>
 
-<meta name="description" content="Resuelve reglas de tres simples de forma rápida y gratuita.">
+<meta name="description" content="Calcula una regla de tres simple online gratis. Resuelve proporciones en segundos desde cualquier dispositivo.">
 
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="logo.png">
+<link rel="icon" href="favicon.png">
 
 </head>
 
@@ -25,70 +26,209 @@
 </div>
 
 <ul class="menu">
-<li><a href="index.html">Inicio</a></li>
-<li><a href="contacto.html">Contacto</a></li>
+<li><a href="index.html">🏠 Inicio</a></li>
+<li><a href="todas-las-herramientas.html">🛠 Herramientas</a></li>
+<li><a href="sobre-nosotros.html">ℹ️ Sobre nosotros</a></li>
+<li><a href="contacto.html">📩 Contacto</a></li>
 </ul>
 
 </nav>
 
 <header class="hero">
+
 <h1>Calculadora de Regla de Tres</h1>
-<p>Resuelve una regla de tres simple en segundos.</p>
+
+<p>
+Resuelve cualquier regla de tres simple de forma rápida y gratuita.
+</p>
+
 </header>
 
-<section style="max-width:700px;margin:auto;padding:30px;">
+<section class="herramienta">
 
-<input id="a" type="number" placeholder="Valor A">
+<h2>Calcular regla de tres</h2>
 
-<br><br>
+<label><strong>Valor A</strong></label>
 
-<input id="b" type="number" placeholder="Valor B">
-
-<br><br>
-
-<input id="c" type="number" placeholder="Valor C">
+<input id="a" type="number" placeholder="Ejemplo: 5">
 
 <br><br>
 
-<button onclick="calcular()">Calcular</button>
+<label><strong>Valor B</strong></label>
 
-<h2 id="resultado"></h2>
+<input id="b" type="number" placeholder="Ejemplo: 10">
 
-<hr>
+<br><br>
+
+<label><strong>Valor C</strong></label>
+
+<input id="c" type="number" placeholder="Ejemplo: 20">
+
+<div style="margin-top:25px;display:flex;gap:15px;flex-wrap:wrap;">
+
+<button onclick="calcular()">
+📐 Calcular
+</button>
+
+<button onclick="limpiar()">
+🗑 Limpiar
+</button>
+
+</div>
+
+<div id="resultado" class="resultado" style="display:none;"></div>
+
+<hr style="margin:50px 0;">
 
 <h2>¿Qué es una regla de tres?</h2>
 
 <p>
-La regla de tres es un método matemático para calcular un valor desconocido a partir de tres valores conocidos.
+La regla de tres es un procedimiento matemático utilizado para calcular un valor desconocido cuando existe una relación proporcional entre tres valores conocidos.
+</p>
+
+<h2 style="margin-top:40px;">Ejemplo</h2>
+
+<p>
+Si 5 productos cuestan 10 €, ¿cuánto costarán 20 productos? La respuesta es 40 €.
+</p>
+
+<hr style="margin:50px 0;">
+
+<h2>¿Para qué sirve?</h2>
+
+<ul>
+
+<li>✅ Calcular precios.</li>
+
+<li>✅ Resolver ejercicios de matemáticas.</li>
+
+<li>✅ Calcular proporciones.</li>
+
+<li>✅ Realizar conversiones rápidas.</li>
+
+</ul>
+
+<hr style="margin:50px 0;">
+
+<h2>Preguntas frecuentes</h2>
+
+<h3>¿Es gratuita?</h3>
+
+<p>Sí. Puedes usarla todas las veces que quieras.</p>
+
+<h3>¿Funciona en móviles?</h3>
+
+<p>Sí, es compatible con móviles, tablets y ordenadores.</p>
+
+<h3>¿Necesito instalar algo?</h3>
+
+<p>No. Funciona directamente desde tu navegador.</p>
+
+<hr style="margin:50px 0;">
+
+<h2>Herramientas relacionadas</h2>
+
+<ul>
+
+<li><a href="calculadora-porcentajes.html">📊 Calculadora de Porcentajes</a></li>
+
+<li><a href="calculadora-descuentos.html">💸 Calculadora de Descuentos</a></li>
+
+<li><a href="calculadora-iva.html">🧮 Calculadora de IVA</a></li>
+
+<li><a href="calculadora-edad.html">🎂 Calculadora de Edad</a></li>
+
+</ul>
+
+<p style="text-align:center;margin-top:40px;">
+
+<a href="index.html">
+<button>🏠 Volver al inicio</button>
+</a>
+
 </p>
 
 </section>
+<footer>
+
+<h3>Herramientas Online</h3>
+
+<p>
+Calculadoras, conversores y utilidades gratuitas para cualquier momento.
+</p>
+
+<p>
+<a href="todas-las-herramientas.html">Herramientas</a> |
+<a href="sobre-nosotros.html">Sobre nosotros</a> |
+<a href="contacto.html">Contacto</a> |
+<a href="privacidad.html">Privacidad</a> |
+<a href="cookies.html">Cookies</a> |
+<a href="aviso-legal.html">Aviso legal</a>
+</p>
+
+<p>© 2026 Herramientas Online</p>
+
+</footer>
 
 <script>
 
 function calcular(){
 
-const a=Number(document.getElementById("a").value);
-const b=Number(document.getElementById("b").value);
-const c=Number(document.getElementById("c").value);
+const a = Number(document.getElementById("a").value);
+const b = Number(document.getElementById("b").value);
+const c = Number(document.getElementById("c").value);
 
-if(!a || !b || !c){
+const resultado = document.getElementById("resultado");
 
-document.getElementById("resultado").innerHTML="Introduce todos los valores.";
+if(a<=0 || b<=0 || c<=0){
+
+resultado.style.display="block";
+
+resultado.innerHTML=`
+<h3>⚠ Error</h3>
+<p>Introduce tres valores válidos mayores que cero.</p>
+`;
 
 return;
 
 }
 
-const x=(b*c)/a;
+const x = (b*c)/a;
 
-document.getElementById("resultado").innerHTML=
-`Resultado: <strong>${x.toFixed(2)}</strong>`;
+resultado.style.display="block";
+
+resultado.innerHTML=`
+
+<h3>📐 Resultado</h3>
+
+<p><strong>Valor A:</strong> ${a}</p>
+
+<p><strong>Valor B:</strong> ${b}</p>
+
+<p><strong>Valor C:</strong> ${c}</p>
+
+<p style="font-size:26px;color:#16a34a;margin-top:20px;">
+
+<strong>X = ${x.toFixed(2)}</strong>
+
+</p>
+
+`;
+
+}
+
+function limpiar(){
+
+document.getElementById("a").value="";
+document.getElementById("b").value="";
+document.getElementById("c").value="";
+
+document.getElementById("resultado").style.display="none";
+document.getElementById("resultado").innerHTML="";
 
 }
 
 </script>
 
 </body>
-
 </html>
