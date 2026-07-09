@@ -108,7 +108,7 @@ Estas son las herramientas más utilizadas por nuestros usuarios.
 <section class="estadisticas">
 
 <div class="dato">
-<h2>3</h2>
+<h2 id="contador-herramientas">0</h2>
 <p>Herramientas</p>
 </div>
 
@@ -336,6 +336,10 @@ boton.onclick = function () {
         behavior: "smooth"
     });
 };
+</script>
+<script>
+const tarjetas = document.querySelectorAll(".card");
+document.getElementById("contador-herramientas").textContent = tarjetas.length;
 </script>
 </body>
 </html>
