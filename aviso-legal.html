@@ -1,54 +1,176 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Aviso Legal | Herramientas Online</title>
-<meta name="description" content="Aviso legal de Herramientas Online.">
+
+<meta name="description" content="Consulta el aviso legal de Herramientas Online y las condiciones de uso del sitio web.">
+
+<meta name="keywords" content="aviso legal, condiciones de uso, herramientas online">
+
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 
 <body>
 
-<nav>
+<nav class="navbar">
+
 <div class="logo">
-<a href="index.html" style="color:white;text-decoration:none;">
-🛠 Herramientas Online
+
+<a href="index.html">
+<img src="logo.png" alt="Herramientas Online">
 </a>
+
+<span>Herramientas Online</span>
+
 </div>
+
+<ul class="menu">
+
+<li><a href="index.html">Inicio</a></li>
+
+<li><a href="todas-las-herramientas.html">Herramientas</a></li>
+
+<li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+
+<li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
 </nav>
 
 <header class="hero">
+
 <h1>Aviso Legal</h1>
-<p>Información legal sobre el uso de este sitio web.</p>
+
+<p>
+Información legal y condiciones de uso de Herramientas Online.
+</p>
+
 </header>
 
-<section style="max-width:900px;margin:auto;padding:30px;line-height:1.8;">
+<section style="max-width:900px;margin:auto;padding:30px;line-height:1.9;">
 
 <h2>Información general</h2>
 
 <p>
-Herramientas Online es un sitio web creado con fines informativos y para ofrecer herramientas gratuitas a sus usuarios.
+Herramientas Online es un sitio web que ofrece calculadoras, conversores y utilidades gratuitas accesibles desde cualquier dispositivo. El acceso al sitio implica la aceptación de las condiciones descritas en este aviso legal.
+</p>
+
+<h2>Condiciones de uso</h2>
+
+<p>
+Los usuarios se comprometen a utilizar este sitio web de forma responsable y conforme a la legislación vigente. Queda prohibido cualquier uso que pueda perjudicar el funcionamiento del sitio o afectar a terceros.
 </p>
 
 <h2>Responsabilidad</h2>
 
 <p>
-Aunque intentamos que todas las herramientas funcionen correctamente, no garantizamos la ausencia de errores ni nos hacemos responsables del uso que cada usuario haga de los resultados obtenidos.
+Aunque trabajamos para ofrecer información correcta y herramientas que funcionen adecuadamente, no garantizamos la ausencia de errores ni asumimos responsabilidad por los daños que pudieran derivarse del uso de los resultados obtenidos.
 </p>
 
 <h2>Propiedad intelectual</h2>
 
 <p>
-El contenido, diseño y código de esta web son propiedad de Herramientas Online, salvo que se indique lo contrario.
+El contenido, diseño, logotipos, textos, imágenes y código fuente de Herramientas Online están protegidos por la legislación vigente sobre propiedad intelectual, salvo que se indique expresamente lo contrario.
+</p>
+
+<h2>Enlaces externos</h2>
+
+<p>
+Este sitio puede contener enlaces hacia páginas web de terceros. No somos responsables del contenido ni del funcionamiento de dichos sitios web.
+</p>
+
+<h2>Modificaciones</h2>
+
+<p>
+Nos reservamos el derecho a modificar este aviso legal en cualquier momento con el objetivo de adaptarlo a cambios legales o mejoras del sitio web.
+</p>
+
+<p style="text-align:center;margin-top:50px;">
+
+<a href="privacidad.html">
+<button>🔒 Política de privacidad</button>
+</a>
+
+<a href="cookies.html">
+<button>🍪 Política de cookies</button>
+</a>
+
+<a href="index.html">
+<button>🏠 Volver al inicio</button>
+</a>
+
 </p>
 
 </section>
 
 <footer>
+
+<h3>Herramientas Online</h3>
+
+<p>
+Calculadoras, conversores y herramientas online gratuitas para cualquier momento.
+</p>
+
+<p>
+
+<a href="todas-las-herramientas.html">Herramientas</a> |
+
+<a href="sobre-nosotros.html">Sobre nosotros</a> |
+
+<a href="contacto.html">Contacto</a> |
+
+<a href="privacidad.html">Privacidad</a> |
+
+<a href="cookies.html">Cookies</a> |
+
+<a href="aviso-legal.html">Aviso legal</a>
+
+</p>
+
 <p>© 2026 Herramientas Online</p>
+
 </footer>
+
+<button id="subir">⬆️</button>
+
+<script>
+
+const boton=document.getElementById("subir");
+
+window.onscroll=function(){
+
+if(window.scrollY>300){
+
+boton.style.display="block";
+
+}else{
+
+boton.style.display="none";
+
+}
+
+};
+
+boton.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+</script>
 
 </body>
 </html>
