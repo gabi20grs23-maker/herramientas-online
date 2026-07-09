@@ -304,62 +304,112 @@ Calculadoras, conversores y utilidades gratuitas para cualquier momento.
 
 <p>© 2026 Herramientas Online</p>
 
+</div>
+
+</section>
+
+<footer>
+
+<h3>Herramientas Online</h3>
+
+<p>
+Calculadoras, conversores y utilidades gratuitas para cualquier momento.
+</p>
+
+<nav class="footer-menu">
+
+<a href="todas-las-herramientas.html">Herramientas</a> |
+
+<a href="sobre-nosotros.html">Sobre nosotros</a> |
+
+<a href="contacto.html">Contacto</a> |
+
+<a href="privacidad.html">Privacidad</a> |
+
+<a href="cookies.html">Cookies</a> |
+
+<a href="aviso-legal.html">Aviso legal</a>
+
+</nav>
+
+<p>© 2026 Herramientas Online. Todos los derechos reservados.</p>
+
 </footer>
+
+<button id="subir" aria-label="Volver arriba">⬆️</button>
 
 <script src="script.js"></script>
 
 <script>
 
+// =========================
+// BUSCADOR
+// =========================
+
 const buscador = document.getElementById("buscar");
 
-buscador.addEventListener("keyup", function(){
+if (buscador) {
+
+buscador.addEventListener("keyup", function () {
 
 const texto = buscador.value.toLowerCase();
 
 const tarjetas = document.querySelectorAll(".card");
 
-tarjetas.forEach(card=>{
+tarjetas.forEach(card => {
 
 const contenido = card.innerText.toLowerCase();
 
-if(contenido.includes(texto)){
+card.style.display = contenido.includes(texto) ? "block" : "none";
 
-card.style.display="block";
+});
 
-}else{
+});
 
-card.style.display="none";
+}
+
+// =========================
+// BOTÓN SUBIR
+// =========================
+
+const boton = document.getElementById("subir");
+
+window.addEventListener("scroll", function () {
+
+if (window.scrollY > 300) {
+
+boton.style.display = "block";
+
+} else {
+
+boton.style.display = "none";
 
 }
 
 });
 
+boton.addEventListener("click", function () {
+
+window.scrollTo({
+
+top: 0,
+
+behavior: "smooth"
+
 });
 
-</script>
-<button id="subir">⬆️</button>
+});
 
-<script>
-const boton = document.getElementById("subir");
+// =========================
+// CONTADOR DE HERRAMIENTAS
+// =========================
 
-window.onscroll = function () {
-    if (window.scrollY > 300) {
-        boton.style.display = "block";
-    } else {
-        boton.style.display = "none";
-    }
-};
-
-boton.onclick = function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-};
-</script>
-<script>
 const tarjetas = document.querySelectorAll(".card");
+
 document.getElementById("contador-herramientas").textContent = tarjetas.length;
+
 </script>
+
 </body>
+
 </html>
