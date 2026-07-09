@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Conversor de Temperatura | Herramientas Online</title>
+
+<meta name="description" content="Convierte grados Celsius a Fahrenheit y viceversa de forma gratuita.">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="logo.png">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">
+<a href="index.html">
+<img src="logo.png" alt="Herramientas Online">
+</a>
+<span>Herramientas Online</span>
+</div>
+
+<ul class="menu">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+</ul>
+</nav>
+
+<header class="hero">
+<h1>Conversor de Temperatura</h1>
+<p>Convierte entre Celsius y Fahrenheit al instante.</p>
+</header>
+
+<section style="max-width:700px;margin:auto;padding:30px;">
+
+<label>Temperatura</label><br><br>
+
+<input id="valor" type="number" placeholder="Ejemplo: 25">
+
+<br><br>
+
+<select id="tipo">
+<option value="cf">Celsius → Fahrenheit</option>
+<option value="fc">Fahrenheit → Celsius</option>
+</select>
+
+<br><br>
+
+<button onclick="convertir()">Convertir</button>
+
+<h2 id="resultado"></h2>
+
+<hr>
+
+<h2>¿Cómo funciona?</h2>
+
+<p>
+Selecciona el tipo de conversión, introduce un valor y obtendrás el resultado inmediatamente.
+</p>
+
+</section>
+
+<script>
+function convertir(){
+
+const valor=Number(document.getElementById("valor").value);
+const tipo=document.getElementById("tipo").value;
+
+if(isNaN(valor)){
+document.getElementById("resultado").innerHTML="Introduce una temperatura válida.";
+return;
+}
+
+let resultado;
+
+if(tipo==="cf"){
+resultado=(valor*9/5)+32;
+document.getElementById("resultado").innerHTML=`${valor} °C = <strong>${resultado.toFixed(2)} °F</strong>`;
+}else{
+resultado=(valor-32)*5/9;
+document.getElementById("resultado").innerHTML=`${valor} °F = <strong>${resultado.toFixed(2)} °C</strong>`;
+}
+
+}
+</script>
+
+</body>
+</html>
