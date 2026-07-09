@@ -6,16 +6,17 @@
 
 <title>Conversor de Temperatura | Herramientas Online</title>
 
-<meta name="description" content="Convierte grados Celsius a Fahrenheit y viceversa de forma gratuita.">
+<meta name="description" content="Convierte grados Celsius a Fahrenheit y Fahrenheit a Celsius de forma rápida, gratuita y online.">
 
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="logo.png">
+<link rel="icon" type="image/png" href="favicon.png">
 
 </head>
 
 <body>
 
 <nav class="navbar">
+
 <div class="logo">
 <a href="index.html">
 <img src="logo.png" alt="Herramientas Online">
@@ -25,22 +26,30 @@
 
 <ul class="menu">
 <li><a href="index.html">Inicio</a></li>
+<li><a href="todas-las-herramientas.html">Herramientas</a></li>
+<li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
 <li><a href="contacto.html">Contacto</a></li>
 </ul>
+
 </nav>
 
 <header class="hero">
+
 <h1>Conversor de Temperatura</h1>
-<p>Convierte entre Celsius y Fahrenheit al instante.</p>
+
+<p>Convierte entre grados Celsius y Fahrenheit de forma instantánea.</p>
+
 </header>
 
 <section style="max-width:700px;margin:auto;padding:30px;">
 
-<label>Temperatura</label><br><br>
+<label>Temperatura</label>
 
 <input id="valor" type="number" placeholder="Ejemplo: 25">
 
 <br><br>
+
+<label>Tipo de conversión</label>
 
 <select id="tipo">
 <option value="cf">Celsius → Fahrenheit</option>
@@ -51,40 +60,170 @@
 
 <button onclick="convertir()">Convertir</button>
 
-<h2 id="resultado"></h2>
+<button onclick="limpiar()" style="margin-left:10px;background:#6b7280;">
+Limpiar
+</button>
 
-<hr>
+<div id="resultado" style="display:none;background:#f8fafc;padding:20px;border-radius:12px;margin-top:30px;"></div>
 
-<h2>¿Cómo funciona?</h2>
+<hr style="margin:40px 0;">
+
+<h2>¿Cómo funciona este conversor?</h2>
 
 <p>
-Selecciona el tipo de conversión, introduce un valor y obtendrás el resultado inmediatamente.
+Introduce una temperatura, selecciona el tipo de conversión y pulsa el botón para obtener el resultado al instante.
+</p>
+
+<h2>Fórmulas utilizadas</h2>
+
+<p><strong>Celsius → Fahrenheit</strong></p>
+
+<p>(°C × 9 / 5) + 32</p>
+
+<p><strong>Fahrenheit → Celsius</strong></p>
+
+<p>(°F − 32) × 5 / 9</p>
+
+<h2>Ejemplos</h2>
+
+<ul>
+<li>0 °C = 32 °F</li>
+<li>25 °C = 77 °F</li>
+<li>100 °C = 212 °F</li>
+<li>68 °F = 20 °C</li>
+</ul>
+
+<hr style="margin:40px 0;">
+
+<h2>Preguntas frecuentes</h2>
+
+<h3>¿Es gratuita esta herramienta?</h3>
+
+<p>Sí, puedes utilizarla tantas veces como quieras sin registrarte.</p>
+
+<h3>¿Funciona en móviles?</h3>
+
+<p>Sí, está adaptada para móviles, tablets y ordenadores.</p>
+
+<h3>¿Qué escalas puedo convertir?</h3>
+
+<p>Puedes convertir entre grados Celsius y Fahrenheit en ambos sentidos.</p>
+
+<hr style="margin:40px 0;">
+
+<h2>También te puede interesar</h2>
+
+<ul>
+<li><a href="calculadora-imc.html">Calculadora de IMC</a></li>
+<li><a href="calculadora-iva.html">Calculadora de IVA</a></li>
+<li><a href="calculadora-porcentajes.html">Calculadora de Porcentajes</a></li>
+<li><a href="calculadora-descuentos.html">Calculadora de Descuentos</a></li>
+</ul>
+
+<p style="text-align:center;margin-top:40px;">
+
+<a href="index.html">
+
+<button>🏠 Volver al inicio</button>
+
+</a>
+
 </p>
 
 </section>
 
+<footer>
+
+<h3>Herramientas Online</h3>
+
+<p>
+Calculadoras, conversores y utilidades gratuitas para cualquier momento.
+</p>
+
+<p>
+
+<a href="todas-las-herramientas.html">Herramientas</a> |
+
+<a href="sobre-nosotros.html">Sobre nosotros</a> |
+
+<a href="contacto.html">Contacto</a> |
+
+<a href="privacidad.html">Privacidad</a> |
+
+<a href="cookies.html">Cookies</a> |
+
+<a href="aviso-legal.html">Aviso legal</a>
+
+</p>
+
+<p>© 2026 Herramientas Online</p>
+
+</footer>
+
 <script>
+
 function convertir(){
 
-const valor=Number(document.getElementById("valor").value);
-const tipo=document.getElementById("tipo").value;
+const valor = Number(document.getElementById("valor").value);
+
+const tipo = document.getElementById("tipo").value;
+
+const resultado = document.getElementById("resultado");
 
 if(isNaN(valor)){
-document.getElementById("resultado").innerHTML="Introduce una temperatura válida.";
+
+resultado.style.display="block";
+
+resultado.innerHTML="⚠️ Introduce una temperatura válida.";
+
 return;
+
 }
 
-let resultado;
+let conversion;
 
 if(tipo==="cf"){
-resultado=(valor*9/5)+32;
-document.getElementById("resultado").innerHTML=`${valor} °C = <strong>${resultado.toFixed(2)} °F</strong>`;
+
+conversion=(valor*9/5)+32;
+
+resultado.innerHTML=`
+<h3>🌡️ Resultado</h3>
+
+<p><strong>${valor} °C</strong> equivalen a</p>
+
+<p style="font-size:28px;color:#16a34a;"><strong>${conversion.toFixed(2)} °F</strong></p>
+`;
+
 }else{
-resultado=(valor-32)*5/9;
-document.getElementById("resultado").innerHTML=`${valor} °F = <strong>${resultado.toFixed(2)} °C</strong>`;
-}
+
+conversion=(valor-32)*5/9;
+
+resultado.innerHTML=`
+<h3>🌡️ Resultado</h3>
+
+<p><strong>${valor} °F</strong> equivalen a</p>
+
+<p style="font-size:28px;color:#16a34a;"><strong>${conversion.toFixed(2)} °C</strong></p>
+`;
 
 }
+
+resultado.style.display="block";
+
+}
+
+function limpiar(){
+
+document.getElementById("valor").value="";
+
+document.getElementById("tipo").selectedIndex=0;
+
+document.getElementById("resultado").style.display="none";
+
+document.getElementById("resultado").innerHTML="";
+
+}
+
 </script>
 
 </body>
