@@ -1,48 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Contacto | Herramientas Online</title>
-<meta name="description" content="Página de contacto de Herramientas Online.">
+
+<meta name="description" content="Contacta con Herramientas Online para enviar sugerencias, informar de errores o proponer nuevas herramientas.">
+
+<meta name="keywords" content="contacto herramientas online, soporte, sugerencias, calculadoras online">
+
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 
 <body>
 
-<nav>
+<nav class="navbar">
+
 <div class="logo">
-<a href="index.html" style="color:white;text-decoration:none;">
-🛠 Herramientas Online
+
+<a href="index.html">
+<img src="logo.png" alt="Herramientas Online">
 </a>
+
+<span>Herramientas Online</span>
+
 </div>
+
+<ul class="menu">
+
+<li><a href="index.html">Inicio</a></li>
+
+<li><a href="todas-las-herramientas.html">Herramientas</a></li>
+
+<li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+
+<li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
 </nav>
 
 <header class="hero">
+
 <h1>Contacto</h1>
-<p>¿Tienes alguna sugerencia o has encontrado un error?</p>
+
+<p>
+¿Tienes alguna sugerencia, has encontrado un error o quieres proponernos una nueva herramienta?
+</p>
+
 </header>
 
-<section style="max-width:800px;margin:auto;padding:30px;">
+<section style="max-width:850px;margin:auto;padding:30px;">
+
+<h2>Ponte en contacto con nosotros</h2>
 
 <p>
-Puedes contactar con nosotros escribiendo al siguiente correo:
+Si deseas enviarnos una sugerencia, informar de un problema o hacernos cualquier consulta, puedes escribirnos al siguiente correo electrónico.
 </p>
 
-<p style="font-size:22px;font-weight:bold;">
+<p style="font-size:24px;font-weight:bold;text-align:center;margin:30px 0;">
+
 tucorreo@ejemplo.com
+
 </p>
 
 <p>
-Más adelante sustituiremos este correo por uno propio del sitio web.
+Responderemos lo antes posible. Todas las sugerencias son bienvenidas y nos ayudan a seguir mejorando la web.
+</p>
+
+<hr style="margin:50px 0;">
+
+<h2>¿Sobre qué puedes escribirnos?</h2>
+
+<ul>
+
+<li>🧮 Propuestas de nuevas calculadoras.</li>
+
+<li>🐞 Errores encontrados en alguna herramienta.</li>
+
+<li>💡 Ideas para mejorar la página.</li>
+
+<li>❓ Dudas relacionadas con el funcionamiento del sitio.</li>
+
+</ul>
+
+<hr style="margin:50px 0;">
+
+<h2>Preguntas frecuentes</h2>
+
+<h3>¿Cuánto tardáis en responder?</h3>
+
+<p>
+Intentamos responder a todos los mensajes en el menor tiempo posible.
+</p>
+
+<h3>¿Puedo proponer una nueva herramienta?</h3>
+
+<p>
+Sí. Valoramos todas las propuestas y añadimos nuevas herramientas de forma periódica.
+</p>
+
+<h3>¿Las herramientas seguirán siendo gratuitas?</h3>
+
+<p>
+Sí. Nuestro objetivo es mantener todas las herramientas disponibles de forma gratuita.
+</p>
+
+<p style="text-align:center;margin-top:50px;">
+
+<a href="todas-las-herramientas.html">
+<button>🛠️ Ver herramientas</button>
+</a>
+
+<a href="index.html">
+<button>🏠 Volver al inicio</button>
+</a>
+
 </p>
 
 </section>
 
 <footer>
+
+<h3>Herramientas Online</h3>
+
+<p>
+Calculadoras, conversores y herramientas online gratuitas para cualquier momento.
+</p>
+
+<p>
+
+<a href="todas-las-herramientas.html">Herramientas</a> |
+
+<a href="sobre-nosotros.html">Sobre nosotros</a> |
+
+<a href="contacto.html">Contacto</a> |
+
+<a href="privacidad.html">Privacidad</a> |
+
+<a href="cookies.html">Cookies</a> |
+
+<a href="aviso-legal.html">Aviso legal</a>
+
+</p>
+
 <p>© 2026 Herramientas Online</p>
+
 </footer>
+
+<button id="subir">⬆️</button>
+
+<script>
+
+const boton=document.getElementById("subir");
+
+window.onscroll=function(){
+
+if(window.scrollY>300){
+
+boton.style.display="block";
+
+}else{
+
+boton.style.display="none";
+
+}
+
+};
+
+boton.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+};
+
+</script>
 
 </body>
 </html>
